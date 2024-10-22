@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/buttons.css" />
+    <link rel="stylesheet" href="../styles/globalStyles.css" />
+    <script
+      src="https://kit.fontawesome.com/bc60fa7048.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script defer src="../scripts/registerUser.js"></script>
+  </head>
+  <body>
+    <main class="w-full h-screen flex justify-center items-center">
+      <div class="grid grid-cols-2 gap-10 w-3/6 h-4/6">
+        <section class="flex justify-center">
+          <div
+            class="w-80 border rounded border-gray-300 flex justify-center flex-col items-center px-5 py-8 h-full overflow-hidden"
+          >
+            <form
+              id="form-data"
+              action=""
+              class="flex flex-col gap-6 w-full max-w-md"
+            >
+              <div class="flex justify-center w-full">
+                <h1 class="text-xl font-medium">Cadastro</h1>
+              </div>
+              <div class="flex flex-col w-full gap-3">
+                <label class="leading-none" for="username">Usuário</label>
+                <input
+                  class="border rounded bg-gray-100 border-gray-200 px-3 py-1 w-full"
+                  type="text"
+                  name="username"
+                  placeholder="Digite seu usuário aqui"
+                  id="username"
+                />
+              </div>
+              <div class="flex flex-col w-full gap-3">
+                <label class="leading-none" for="username">Email</label>
+                <input
+                  class="border rounded bg-gray-100 border-gray-200 px-3 py-1 w-full"
+                  type="email"
+                  name="email"
+                  placeholder="Digite seu email aqui"
+                  id="email"
+                />
+              </div>
+              <div class="flex flex-col w-full gap-3">
+                <label class="leading-none" for="username"
+                  >Link da foto de perfil</label
+                >
+                <input
+                  class="border rounded bg-gray-100 border-gray-200 px-3 py-1 w-full"
+                  type="text"
+                  name="avatar"
+                  placeholder="Insira o link aqui"
+                  id="avatar"
+                />
+              </div>
+              <div class="flex flex-col w-full gap-3">
+                <label class="leading-none" for="username">Senha</label>
+                <input
+                  class="border rounded bg-gray-100 border-gray-200 px-3 py-1 w-full"
+                  type="password"
+                  name="password"
+                  placeholder="Digite sua senha aqui"
+                  id="password"
+                />
+              </div>
+
+              <div class="flex flex-col w-full gap-7">
+                <button
+                  id="register"
+                  style="background-color: var(--brand100)"
+                  class="text-white rounded py-1"
+                >
+                  Cadastrar
+                </button>
+
+                <button
+                  id="login"
+                  class="box-border border border-solid rounded border-gray-200 py-1"
+                >
+                  Voltar para o login
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
+        <section class="flex justify-center items-center">
+          <div class="flex flex-col w-80 px-5 gap-4">
+            <div class="flex flex-col gap-2">
+              <h1 class="text-[24px]">Petinfo</h1>
+              <h2
+                style="color: var(--brand100)"
+                class="text-[24px] font-semibold"
+              >
+                Ooooooba!
+              </h2>
+              <p class="font-normal text-base">
+                Agora vamos poder contribuir para o bem estar do seu pet por
+                meio do conhecimento
+              </p>
+            </div>
+
+            <div class="grid grid-cols-3 gap-4 h-52">
+              <div
+                class="border rounded-xl bg-red-200 overflow-hidden row-span-2 h-full"
+              >
+                <img
+                  src="../assets/images/a4a5b1ad89db944e40e678e70159658a.jfif"
+                  alt=""
+                  class="object-cover w-full h-full"
+                />
+              </div>
+
+              <div class="border rounded-xl bg-blue-200 overflow-hidden">
+                <img
+                  src="../assets/images/526e816ecf3e10d3e63080c0a280a81f.jfif"
+                  alt=""
+                  class="object-cover w-full h-full"
+                />
+              </div>
+
+              <div class="border rounded-xl bg-green-200 overflow-hidden">
+                <img
+                  src="../assets/images/679ac58dde11a15b48cc0ecbb16f2a6d.jfif"
+                  alt=""
+                  class="object-cover w-full h-full"
+                />
+              </div>
+              <div
+                class="border rounded-xl bg-yellow-200 overflow-hidden col-span-2"
+              >
+                <img
+                  src="../assets/images/0f4f409b1990e08251d8208c9ff7530e.jfif"
+                  alt=""
+                  class="object-cover w-full h-full"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <div style="box-shadow: 0px 4px 4px 0px #00000040;" id="tooltip-login" class="flex flex-col gap-1 box-border w-fit p-2 hidden">
+          <div class="flex flex-col">
+            <div class="flex items-center gap-1">
+              <i class="fa-solid fa-circle-check"></i>
+              <h3>Sua conta foi criada com sucesso!</h3>
+            </div>
+            <div class="w-96">
+              <p>
+                Agora você pode acessar os conteúdos utilizando seu usuário e
+                senha na página de login: <a href="../pages/login.html">Acessar página de login</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
